@@ -1,0 +1,16 @@
+<p *ngIf="!exampleData"><em>Loading...</em></p>
+<dx-data-grid [dataSource]="exampleData"
+              [allowColumnReordering]="true"
+              [rowAlternationEnabled]="true"
+              [showBorders]="true"
+              [hoverStateEnabled]="true">
+  <dxo-selection mode="single"></dxo-selection>
+  <dxo-paging [pageSize]="10"></dxo-paging>
+  <dxo-pager [showPageSizeSelector]="true"
+             [allowedPageSizes]="[10, 25, 50, 100]"></dxo-pager>
+  <dxo-search-panel [visible]="true"
+                    [highlightCaseSensitive]="true"></dxo-search-panel>
+  <dxo-group-panel [visible]="true"></dxo-group-panel>
+  <dxo-grouping [autoExpandAll]="false"></dxo-grouping>
+  <dxo-column-chooser [enabled]="true"></dxo-column-chooser>
+</dx-data-grid>
